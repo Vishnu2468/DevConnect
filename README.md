@@ -1,6 +1,6 @@
 # DevConnect - A Mini Social Media Platform for Developers
 
-![DevConnect Logo](![DevConnectLogo](https://github.com/user-attachments/assets/de4c2454-a8c9-41eb-a4fc-994f4499cd76)) <!-- Replace with your actual logo/image if available -->
+(![DevConnectLogo](https://github.com/user-attachments/assets/de4c2454-a8c9-41eb-a4fc-994f4499cd76)) <!-- Replace with your actual logo/image if available -->
 
 ## Table of Contents
 - [Project Overview](#project-overview)
