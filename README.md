@@ -1,6 +1,3 @@
-![image](https://github.com/user-attachments/assets/f76bdada-44cd-4d0a-982c-73814b96ef05)  
-![image](https://github.com/user-attachments/assets/a52b069c-1fbd-4141-8d28-ebe4d202e12a)
-
 # DevConnect - A Mini Social Media Platform for Developers
 
 ![DevConnectLogo](https://github.com/user-attachments/assets/de4c2454-a8c9-41eb-a4fc-994f4499cd76)
