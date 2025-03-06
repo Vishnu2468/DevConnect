@@ -3,13 +3,15 @@
 ![DevConnectLogo](https://github.com/user-attachments/assets/de4c2454-a8c9-41eb-a4fc-994f4499cd76)
 
 ## Table of Contents
+- [What is DevConnect?](#what-is-devconnect)
 - [Project Overview](#project-overview)
 - [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
+  - [Frontend Setup (Web)](#frontend-setup-web)
+  - [Mobile App Setup (React Native)](#mobile-app-setup-react-native)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
@@ -20,11 +22,17 @@
 
 ---
 
+## What is DevConnect?
+
+𝗗𝗲𝘃𝗖𝗼𝗻𝗻𝗲𝗰𝘁 is a dedicated social media platform designed specifically for developers. It provides a space where programmers, coders, and tech enthusiasts can connect, share their projects, ideas, and updates, and engage with a like-minded community. Whether you're looking to showcase your latest coding project, seek feedback, or simply network with other developers, DevConnect offers a tailored experience with features like user profiles, post interactions, and real-time notifications—all accessible through both web and mobile interfaces.
+
+---
+
 ## Project Overview
 
-DevConnect is a mini social media platform tailored for developers to connect, share updates, and engage with one another. This full-stack application features a robust backend built with Django and Django REST Framework (DRF) and a modern, responsive frontend developed using React and Vite. Authentication is secured with JWT tokens, ensuring a seamless and secure user experience.
+DevConnect is a mini social media platform tailored for developers to connect, share updates, and engage with one another. This full-stack application features a robust backend built with Django and Django REST Framework (DRF) and a modern, responsive frontend developed using React and Vite for the web, styled with MUI, CSS, and Bootstrap. Additionally, a mobile application has been developed using React Native, ensuring a consistent experience across platforms. Authentication is secured with JWT tokens, providing a seamless and secure user experience on both web and mobile interfaces.
 
-The platform enables developers to create profiles, post updates (with text and images), follow/unfollow other users, and interact with posts through fully functional likes, dislikes, comments, and a multiple-comment system—all working perfectly across both web and mobile app interfaces. Users can explore a global feed or a personalized "Following Feed," with real-time notifications enhancing engagement. This project showcases expertise in full-stack development, RESTful API design, and modern web development practices.
+The platform enables developers to create profiles, post updates (with text and images), follow/unfollow other users, and interact with posts through fully functional likes, dislikes, comments, and a multiple-comment system—all working perfectly across both web and mobile app interfaces. Users can explore a global feed or a personalized "Following Feed," with real-time notifications enhancing engagement. This project showcases expertise in full-stack development, RESTful API design, and modern web and mobile development practices.
 
 ---
 
@@ -63,9 +71,11 @@ The platform enables developers to create profiles, post updates (with text and 
 
 ## Technologies Used
 
-- **Frontend:**
+- **Frontend (Web):**
   - React (with Vite for fast development and builds)
-  - Tailwind CSS (or Bootstrap/MUI, depending on your choice) for styling
+  - MUI, CSS, and Bootstrap for styling
+- **Mobile Application:**
+  - React Native for cross-platform mobile development
 - **Backend:**
   - Django
   - Django REST Framework (DRF)
@@ -81,13 +91,14 @@ The platform enables developers to create profiles, post updates (with text and 
 
 ## Installation
 
-Follow these steps to set up and run DevConnect locally.
+Follow these steps to set up and run DevConnect locally for both the web and mobile applications.
 
 ### Prerequisites
 - Python 3.8+ installed
 - Node.js 18+ and npm/yarn installed
 - MySQL installed and running
 - Git installed
+- For mobile development: React Native CLI, Android Studio (for Android), or Xcode (for iOS)
 
 ### Backend Setup
 
@@ -148,7 +159,7 @@ Follow these steps to set up and run DevConnect locally.
    ```
    The backend will be available at `http://localhost:8000`.
 
-### Frontend Setup
+### Frontend Setup (Web)
 
 1. **Navigate to the Frontend Directory**
    ```bash
@@ -170,17 +181,43 @@ Follow these steps to set up and run DevConnect locally.
    ```bash
    npm run dev  # or yarn dev
    ```
-   The frontend will be available at `http://localhost:5173` (default Vite port).
+   The web frontend will be available at `http://localhost:5173` (default Vite port).
+
+### Mobile App Setup (React Native)
+
+1. **Navigate to the Mobile Directory** (assuming it’s in the repo, e.g., `mobile/`)
+   ```bash
+   cd ../mobile
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install  # or yarn install
+   ```
+
+3. **Configure API URL**
+   - Update the API base URL in your React Native code (e.g., in a config file) to point to `http://localhost:8000/api/` (or your backend’s IP if testing on a physical device).
+
+4. **Run the Mobile App**
+   - For Android:
+     ```bash
+     npx react-native run-android
+     ```
+   - For iOS:
+     ```bash
+     npx react-native run-ios
+     ```
+   Ensure your emulator or device is set up via Android Studio or Xcode.
 
 ---
 
 ## Usage
 
-1. Open your browser and navigate to `http://localhost:5173`.
-2. Register a new account or log in with existing credentials.
-3. Create your profile, start posting, follow other users, and explore the platform!
+1. **Web**: Open your browser and navigate to `http://localhost:5173`. Register a new account or log in, then explore the platform.
+2. **Mobile**: Launch the app on your emulator or device, sign in, and start connecting with other developers.
+3. Create your profile, post updates, follow users, and interact via likes, dislikes, and comments.
 4. Use the search bar to find posts or users.
-5. Check notifications for updates on your activity.
+5. Check notifications for real-time updates.
 
 ---
 
@@ -206,6 +243,11 @@ devconnect/
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
+├── mobile/
+│   ├── src/               # React Native components and screens
+│   ├── App.js             # Main app entry point
+│   ├── package.json
+│   └── metro.config.js
 └── README.md
 ```
 
@@ -327,5 +369,12 @@ Please ensure your code follows the project's coding standards and includes appr
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- Thanks to the open-source community for tools like Django, React, React Native, MUI, Bootstrap, and Vite.
+- Special appreciation to contributors and testers who helped refine this project.
 
 ---
