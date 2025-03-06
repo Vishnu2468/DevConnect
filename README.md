@@ -22,7 +22,7 @@
 
 ## Project Overview
 
-DevConnect is a mini social media platform designed specifically for developers to connect, share updates, and interact with one another. Built as a final project for MHCognition, this full-stack application combines a robust backend powered by Django and Django REST Framework (DRF) with a modern, responsive frontend crafted using React and Vite. Authentication is secured with JWT tokens, ensuring a seamless and secure user experience.
+DevConnect is a mini social media platform designed specifically for developers to connect, share updates, and interact with one another. This full-stack application combines a robust backend powered by Django and Django REST Framework (DRF) with a modern, responsive frontend crafted using React and Vite. Authentication is secured with JWT tokens, ensuring a seamless and secure user experience.
 
 The platform allows developers to create profiles, post updates, follow other users, interact with posts via likes and comments, and explore a global or personalized feed. Optional stretch goals like notifications and image uploads have been implemented to enhance functionality.
 
@@ -70,7 +70,7 @@ This project demonstrates proficiency in full-stack development, RESTful API des
 - **Backend:**
   - Django
   - Django REST Framework (DRF)
-  - PostgreSQL (Database)
+  - MySQL (Database)
 - **Authentication:**
   - JWT (via SimpleJWT)
 - **Tools:**
@@ -87,7 +87,7 @@ Follow these steps to set up and run DevConnect locally.
 ### Prerequisites
 - Python 3.8+ installed
 - Node.js 18+ and npm/yarn installed
-- PostgreSQL installed and running
+- MySQL installed and running
 - Git installed
 
 ### Backend Setup
@@ -108,19 +108,26 @@ Follow these steps to set up and run DevConnect locally.
    ```bash
    pip install -r requirements.txt
    ```
+   *Note*: Ensure `mysqlclient` is included in `requirements.txt` for MySQL support. If not, install it with:
+   ```bash
+   pip install mysqlclient
+   ```
 
-4. **Set Up PostgreSQL Database**
-   - Create a PostgreSQL database named `devconnect_db`.
+4. **Set Up MySQL Database**
+   - Create a MySQL database named `devconnect_db`:
+     ```sql
+     CREATE DATABASE devconnect_db;
+     ```
    - Update the `DATABASES` configuration in `settings.py`:
      ```python
      DATABASES = {
          'default': {
-             'ENGINE': 'django.db.backends.postgresql',
+             'ENGINE': 'django.db.backends.mysql',
              'NAME': 'devconnect_db',
-             'USER': 'your_postgres_user',
-             'PASSWORD': 'your_postgres_password',
+             'USER': 'your_mysql_user',
+             'PASSWORD': 'your_mysql_password',
              'HOST': 'localhost',
-             'PORT': '5432',
+             'PORT': '3306',
          }
      }
      ```
@@ -258,13 +265,5 @@ Please ensure your code follows the project's coding standards and includes appr
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- MHCognition for providing the project guidelines and inspiration.
-- The Django, React, and PostgreSQL communities for their amazing documentation and tools.
-- xAI for creating Grok, which assisted in drafting this README!
 
 ---
