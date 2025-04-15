@@ -1,4 +1,4 @@
-# DevConnect - A Mini Social Media Platform for Developers
+# DevConnect - A Mini Social Media Platform for Developers.
 
 ![DevConnectLogo](https://github.com/user-attachments/assets/b3ae512f-8b2c-4801-ab35-579caf0290df)
 
